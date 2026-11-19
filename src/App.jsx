@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import { supabase } from './utils/supabase'
 import CultureSearch from './CultureSearch.jsx'
+import CultureFilter from './CultureFilter.jsx'
 
 
 function App() {
@@ -29,11 +30,14 @@ function App() {
   return (
     <div className="container">
       <h1>World Cultures</h1>
-   
       <div className="container">
-      <CultureSearch cultures={cultures}/>
+        <CultureSearch cultures={cultures}/>
       </div>
+      <CultureFilter cultures={cultures}/>
+
     </div>
+
+
    
 
   
