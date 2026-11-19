@@ -1,28 +1,45 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import { supabase } from './utils/supabase'
+import CultureSearch from './CultureSearch.jsx'
+
 
 function App() {
-  const [culture, setCultures] = useState([])
+  const [cultures, setCultures] = useState([])
+  
+  
 
-  async function insertCountry() {
-    console.log("Inserting country")
-    const { data, error } = await supabase.from("culture").select()
-    console.log(data)
-    console.log(error)
-    setCultures(data)
+  useEffect(() => {
+  async function getCultures() {
+    console.log("Inserting culture")
+    const { data: cultures, error } = await supabase.from('cultures').select()
+    setCultures(cultures)
+    console.log(cultures)
+
+    if(cultures) {
+      setCultures(cultures)
+    }  
   }
 
-  return (
-    <>
-      <h1>World Cultures</h1>
-      <button onClick={insertCountry}>
-        View Countries
-      </button>
+  getCultures()
+}, [])
 
-    </>
+
+
+  return (
+    <div className="container">
+      <h1>World Cultures</h1>
+   
+      <div className="container">
+      <CultureSearch cultures={cultures}/>
+      </div>
+    </div>
+   
+
+  
     
   )
 }
+
 
 export default App
