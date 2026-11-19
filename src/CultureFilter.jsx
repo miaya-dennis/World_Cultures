@@ -5,7 +5,7 @@
   const unitedStates = cultures.filter(  (item) => item.country === "United States" );
   
   const countryUnited = unitedStates.map( (item, index) => (
-    <article key={index}>
+    <article className="pico-color-purple-300" key={index}>
       <h1>{item.country}</h1>
       <p>Continent: {item.continent}</p>
       <p>Celebration: {item.celebration}</p>

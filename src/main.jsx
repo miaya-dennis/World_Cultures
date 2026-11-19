@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import "@picocss/pico/css/pico.css"
+import "@picocss/pico/css/pico.colors.css"
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

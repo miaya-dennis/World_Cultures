@@ -11,7 +11,7 @@ function CultureSearch ({ cultures }) {
     : [];
 
   return (
-    <div className="container">
+    <div>
       <input
       type="text"
       placeholder="Search cultures"
@@ -20,14 +20,14 @@ function CultureSearch ({ cultures }) {
       />
 
       {filteredCultures.map((culture, index) => (
-       <div key={index}>
+       <article key={index}>
          <h3>{culture.country}</h3> 
          <p>Continent: {culture.continent}</p>
          <p>Celebration: {culture.celebration}</p>
          <p>Traditions: {culture.tradition}</p>
          <p>Languages: {culture.languages}</p>
          <p>Description: {culture.description}</p>
-       </div>
+       </article>
      ))}
     </div>
     );
