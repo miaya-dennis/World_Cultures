@@ -9,9 +9,9 @@
       <h1>{item.country}</h1>
       <p>Continent: {item.continent}</p>
       <p>Celebration: {item.celebration}</p>
-      <p>Tradition: {item.celebration}</p>    
-      <p>Languages: {item.celebration}</p>
-      <p>Description: {item.celebration}</p>
+      <p>Tradition: {item.tradition}</p>    
+      <p>Languages: {item.languages}</p>
+      <p>Description: {item.description}</p>
     </article>
   ));
 
