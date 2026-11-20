@@ -143,7 +143,7 @@ france-card h1 {
 }
 
 .usa-dropdown .grid,
-.france-dropdown . grid {
+.france-dropdown .grid {
     display: grid;
     grid-template-columns: repeat(
         auto-fit,
