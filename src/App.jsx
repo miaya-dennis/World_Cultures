@@ -30,7 +30,7 @@ function App() {
 
 
   return (
-    <div className="container">
+    <div className="app-container">
       
       <div className="container">
         <CultureSearch cultures={cultures}/>
@@ -51,7 +51,11 @@ function App() {
 
         <CultureSlideshow />
      
-
+<footer className="app-footer">
+  <h3> World Cultures</h3>
+  <p>Explore traditons, languages, and celebrations around the world.</p>
+  <p>&copy; 2026 World Cultures</p>
+</footer>
     </div>
 
 
