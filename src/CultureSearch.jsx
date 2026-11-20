@@ -14,7 +14,7 @@ function CultureSearch ({ cultures }) {
     <div>
       <input
       type="text"
-      placeholder="Search cultures"
+      placeholder="Discover More Cultures"
       value={search}
       onChange={(e) => setSearch(e.target.value)}
       />

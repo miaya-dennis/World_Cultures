@@ -3,6 +3,8 @@ import './App.css'
 import { supabase } from './utils/supabase'
 import CultureSearch from './CultureSearch.jsx'
 import CultureFilter from './CultureFilter.jsx'
+import CultureSlideshow from './CultureImages.jsx'
+
 
 
 function App() {
@@ -29,11 +31,26 @@ function App() {
 
   return (
     <div className="container">
-      <h1>World Cultures</h1>
+      
       <div className="container">
         <CultureSearch cultures={cultures}/>
       </div>
+
+       <div className="culture-video">
+        <h1> Explore World Cultures</h1>
+
+        <video  autoPlay loop muted playsInline width="600" controls>
+          <source
+          src="https://lqexrnwjbvsdyfhxuxlc.supabase.co/storage/v1/object/public/CultureClip/Culture%20and%20Diversity%20Stock%20Video%20by%20FILMPAC.webm"
+          type="video/mp4"
+          />
+        </video>
+      </div>
+    
       <CultureFilter cultures={cultures}/>
+
+        <CultureSlideshow />
+     
 
     </div>
 
